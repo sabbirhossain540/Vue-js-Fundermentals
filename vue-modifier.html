@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue js modifier</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+
+	<div id="app">
+		<h1>{{ name }}</h1>
+		<button @click.ctrl="Messege">Click Me</button>
+		<a v-bind:href="address" @click.alt="VueSite">Vue JS</a>
+	</div>
+
+
+<script type="text/javascript">
+	let app = new Vue({
+		el: '#app',
+		data: {
+			name: 'Vue JS Fundermentals',
+			address: '#'
+		},
+
+		methods:{
+			Messege(){
+				console.log("check")
+			},
+			VueSite(){
+				this.address = 'https://vuejs.org/'
+			}
+
+
+		}
+
+	})
+</script>
+	<!-- <script type="text/javascript" src="app.js"></script> -->
+</body>
+</html>
