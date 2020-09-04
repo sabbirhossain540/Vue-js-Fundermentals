@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue js Events Objects</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<style type="text/css">
+		.canvas{
+			height: 240px;
+			width: 240px;
+			margin-top: 20px;
+			background-color: green;
+		}
+	</style>
+
+</head>
+<body>
+
+	<div id="app">
+		<button @click="Me">Click Here</button>
+
+		<div class="canvas" @mousemove="over">
+			{{ log.x }} , {{ log.y }}
+		</div>
+
+	</div>
+
+
+<script type="text/javascript">
+	let app = new Vue({
+		el: '#app',
+		data: {
+			log: {
+				x:0,
+				y:0
+			}
+		},
+		methods: {
+			Me(event){
+				console.log(event)
+			},
+
+			over(e){
+				this.log.x = event.offsetX
+				this.log.y = event.offsetY
+			}
+		}
+
+	})
+</script>
+	<!-- <script type="text/javascript" src="app.js"></script> -->
+</body>
+</html>
