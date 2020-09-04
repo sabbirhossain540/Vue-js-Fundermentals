@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue js Data Binding</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<style type="text/css">
+		.one{
+			color:red;
+		}
+
+		.two{
+			text-decoration: line-through;
+		}
+	</style>
+
+</head>
+<body>
+
+	<div id="app">
+		<a v-bind:href="address">Vue Js</a>
+		<h1 :class="classes">Fundermental</h1>
+		<input type="text" v-bind:value="name">
+	</div>
+
+
+<script type="text/javascript">
+	let app = new Vue({
+		el: '#app',
+		data: {
+			address: 'https://vuejs.org/',
+			classes: ['one','two'],
+			name: 'Sabbir Hossain'
+		}
+
+	})
+</script>
+	<!-- <script type="text/javascript" src="app.js"></script> -->
+</body>
+</html>
