@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue js Methods</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+
+	<div id="app">
+		<h1>{{ MyName() }}</h1>
+		<h3>{{ MyAge(25) }}</h3>
+	</div>
+
+
+<script type="text/javascript">
+	let app = new Vue({
+		el: '#app',
+		data: {
+			name: 'Vue JS Fundermentals'
+		},
+
+		methods:{
+			MyName(){
+				return 'I am '+`${this.name}`
+			},
+			MyAge(age){
+				return `I am ${age} Years old`
+			}
+		}
+
+	})
+</script>
+	<!-- <script type="text/javascript" src="app.js"></script> -->
+</body>
+</html>
