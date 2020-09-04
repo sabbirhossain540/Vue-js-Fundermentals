@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue js Two Way Data Binding</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+
+	<div id="app">
+		My name is {{ name }} <br>
+		<input type="text" v-model="name" >
+
+	</div>
+
+
+<script type="text/javascript">
+	let app = new Vue({
+		el: '#app',
+		data: {
+			name: 'Sabbir',
+			age: 25
+		},
+
+		methods:{
+
+		}
+
+	})
+</script>
+	<!-- <script type="text/javascript" src="app.js"></script> -->
+</body>
+</html>
