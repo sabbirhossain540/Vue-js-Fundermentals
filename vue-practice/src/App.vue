@@ -3,7 +3,7 @@
     <h2>{{ title }}</h2>
     <navbar></navbar>
 
-    <AllFriends :friends="friends"></AllFriends>
+    <AllFriends :friends="friends" @delete="deleteFriend"></AllFriends>
 
     <OnlineFriends :friends="friends"></OnlineFriends>
 
@@ -35,6 +35,14 @@ export default {
   },
   components:{
     Navbar, AllFriends, OnlineFriends
+  },
+  methods:{
+    deleteFriend(payload){
+      //console.log(payload)
+      this.friends = this.friends.filter(friend => {
+        return friend.name !==payload.name
+      })
+    }
   }
 }
 

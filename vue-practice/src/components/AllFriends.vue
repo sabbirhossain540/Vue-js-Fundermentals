@@ -3,7 +3,7 @@
 		<h2>All Friends</h2>
 
 		<div v-for="(friend,index) in friends" :key="index" >
-			<h4> {{ friend.name }} </h4>
+			<h4 @click="unfriend(friend.name)"> {{ friend.name }} </h4>
 		</div>
 		
 	</div>
@@ -17,6 +17,12 @@
 		data(){
 			return {
 				
+			}
+		},
+		methods:{
+			unfriend(name){
+				//console.log(name)
+				this.$emit('delete',{name})
 			}
 		}
 	}
