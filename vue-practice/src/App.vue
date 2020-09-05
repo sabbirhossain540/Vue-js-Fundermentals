@@ -1,10 +1,13 @@
 <template>
   <div id="app">
     <h2>{{ title }}</h2>
+    <navbar></navbar>
   </div>
 </template>
 
 <script>
+
+import Navbar from './components/Navbar.vue'
 
 export default {
   name: 'App',
@@ -12,6 +15,9 @@ export default {
     return {
       title : 'Wow Our View Website are Running'
     }
+  },
+  components:{
+    Navbar
   }
 }
 
