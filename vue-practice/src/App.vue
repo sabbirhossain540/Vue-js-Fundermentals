@@ -3,14 +3,10 @@
     <h2>{{ title }}</h2>
     <navbar></navbar>
 
-    <nav>
-      <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">Post</a></li>
-        <li><a href="">About</a></li>
-      </ul>
-    </nav>
-    
+    <AllFriends :friends="friends"></AllFriends>
+
+    <OnlineFriends :friends="friends"></OnlineFriends>
+
   </div>
 </template>
 
@@ -18,15 +14,27 @@
 
 import Navbar from './components/Navbar.vue'
 
+import AllFriends from './components/AllFriends.vue'
+
+import OnlineFriends from './components/OnlineFriends.vue'
+
 export default {
   name: 'App',
   data(){
     return {
-      title : 'Wow Our View Website are Running'
+      title : 'Wow Our View Website are Running',
+      friends: [
+          { name: 'A', online: true},
+          { name: 'B', online: false},
+          { name: 'C', online: true},
+          { name: 'D', online: false},
+          { name: 'E', online: false},
+          { name: 'F', online: true}
+        ]
     }
   },
   components:{
-    Navbar
+    Navbar, AllFriends, OnlineFriends
   }
 }
 
