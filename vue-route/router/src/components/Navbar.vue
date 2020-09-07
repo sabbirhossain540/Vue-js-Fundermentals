@@ -15,6 +15,10 @@
 					<router-link :to="{name: 'Profile', params:{user_id:id}}">Profile {{ id }}</router-link>
 				</li>
 			</ul>
+
+			<button @click="Contact">Contact</button>
+
+			<button @click="About">Contact</button>
 		</div>
 		
 	</div>
@@ -27,6 +31,15 @@
 		data(){
 			return {
 				userIds : ['1','2','3','4','5','7']
+			}
+		},
+		methods: {
+			Contact(){
+				this.$router.push({name: 'Contact'})
+			},
+
+			About(){
+				this.$router.push({name: 'About'})
 			}
 		}
 	}
